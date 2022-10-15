@@ -38,7 +38,7 @@ return [
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
-            'url' => '/cms/storage/app/public',
+            'url' => '/cms-baghdad/storage/app/public',
             'visibility' => 'public',
         ],
 
