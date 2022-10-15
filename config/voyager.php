@@ -145,9 +145,9 @@ return [
 
         'widgets' => [
             'App\\Widgets\\Card',
-            'App\\Widgets\\User',
-            'App\\Widgets\\Vin',
-            'App\\Widgets\\VinB',
+           // 'App\\Widgets\\User',
+          //  'App\\Widgets\\Vin',
+          //  'App\\Widgets\\VinB',
         ],
 
     ],
