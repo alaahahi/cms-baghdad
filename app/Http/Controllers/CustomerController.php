@@ -730,7 +730,7 @@ class CustomerController extends Controller
               $form_to_data= $data_temp->where('cards.card_type_id', '=',$type );
           }
   
-          $data_service=$form_to_data->select(['client.id','cards.card_number','card_user.names','users.name','client.full_name','client.phone','card_user.strat_active','card_user.end_active', 'card_type.title as type',DB::raw('3000 As price' ) ])->get();
+          $data_service=$form_to_data->select(['client.id','cards.card_number','card_user.names','users.name','client.full_name','client.phone','card_user.strat_active','card_user.end_active', 'card_type.title as type',DB::raw('4000 As price' ) ])->get();
           $data_count=$form_to_data->select(['users.name', 'card_type.title'])->count();
   
           $data_temp_total = DB::table('client')
@@ -756,7 +756,7 @@ class CustomerController extends Controller
           {
               $form_to_data_total= $data_temp_total->where('cards.card_type_id', '=',$type );
           }
-          $data_service_total=$form_to_data_total->select(['card_type.title',DB::raw('SUM(3000) as total')])->get();
+          $data_service_total=$form_to_data_total->select(['card_type.title',DB::raw('SUM(4000) as total')])->get();
           //return response()->json($data_service_total);  
          if ($request->ajax()) 
          {
@@ -804,7 +804,7 @@ class CustomerController extends Controller
           {
               $form_to_data= $data_temp->where('cards.card_type_id', '=',$type );
           }
-          $data_service=$form_to_data->select(['card_type.title',DB::raw('SUM((3000) as total')])->get();
+          $data_service=$form_to_data->select(['card_type.title',DB::raw('SUM((4000) as total')])->get();
           $data_count=$form_to_data->select(['card_type.title'])->count();
   
          //return response()->json($data_service);
